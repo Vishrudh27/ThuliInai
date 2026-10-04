@@ -22,7 +22,7 @@ google-services.json
 GoogleService-Info.plist
 firebase-debug.log*
 
-# Node / Backend
+# Node / Backend / Java
 node_modules/
 npm-debug.log*
 yarn-debug.log*
@@ -30,6 +30,8 @@ yarn-error.log*
 pnpm-debug.log*
 dist/
 out/
+target/
+*.class
 
 # Flutter & Dart
 .dart_tool/
