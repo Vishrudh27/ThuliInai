@@ -15,6 +15,8 @@
 *.jks
 *secret*
 *credential*
+serviceAccountKey*.json
+local.properties
 
 # Firebase & Cloud Credentials
 *firebase*.json
@@ -22,7 +24,15 @@ google-services.json
 GoogleService-Info.plist
 firebase-debug.log*
 
-# Node / Backend / Java
+# Java / Maven
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+*.class
+HELP.md
+.mvn/wrapper/maven-wrapper.jar
+
+# Node / Frontend
 node_modules/
 npm-debug.log*
 yarn-debug.log*
@@ -30,8 +40,6 @@ yarn-error.log*
 pnpm-debug.log*
 dist/
 out/
-target/
-*.class
 
 # Flutter & Dart
 .dart_tool/
@@ -39,6 +47,8 @@ target/
 .flutter-plugins-dependencies
 .packages
 build/
+!**/src/main/**/build/
+!**/src/test/**/build/
 *.pub
 
 # Python
@@ -52,9 +62,18 @@ env/
 # IDE & Editors
 .vscode/
 .idea/
+*.iws
 *.iml
+*.ipr
 *.sublime-project
 *.sublime-workspace
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+.apt_generated
 
 # Operating System Files
 .DS_Store

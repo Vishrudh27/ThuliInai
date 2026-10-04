@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: thuliinai-backend
+  datasource:
+    url: ${DATABASE_URL}
+    hikari:
+      maximum-pool-size: 5
+
+  flyway:
+    url: ${FLYWAY_URL}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+  main:
+    lazy-initialization: true
+
+server:
+  port: ${PORT:8080}
