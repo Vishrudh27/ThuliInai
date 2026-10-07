@@ -22,3 +22,9 @@ spring:
 
 server:
   port: ${PORT:8080}
+
+r2:
+  access-key: ${R2_ACCESS_KEY}
+  secret-key: ${R2_SECRET_KEY}
+  endpoint: ${R2_ENDPOINT}
+  bucket: ${R2_BUCKET}

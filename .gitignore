@@ -24,8 +24,13 @@ google-services.json
 GoogleService-Info.plist
 firebase-debug.log*
 
+# Markdown and txt files
+*.md
+.txt
+
 # Java / Maven
 target/
+backend/uploads/
 !**/src/main/**/target/
 !**/src/test/**/target/
 *.class
