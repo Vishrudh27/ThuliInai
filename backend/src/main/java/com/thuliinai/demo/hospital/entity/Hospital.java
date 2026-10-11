@@ -1,8 +1,9 @@
-package com.thuliinai.demo.hospital;
+package com.thuliinai.demo.hospital.entity;
 
 import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.Instant;
+import java.util.UUID;
 
 @Entity
 @Table(name = "hospitals")
@@ -11,6 +12,9 @@ public class Hospital {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "public_id", nullable = false, unique = true, updatable = false)
+    private UUID publicId = UUID.randomUUID();
 
     @Column(nullable = false, length = 150)
     private String name;
@@ -52,6 +56,9 @@ public class Hospital {
     private Instant createdAt = Instant.now();
 
     public Long getId() { return id; }
+
+    public UUID getPublicId() { return publicId; }
+    public void setPublicId(UUID publicId) { this.publicId = publicId; }
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }

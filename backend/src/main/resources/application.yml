@@ -28,3 +28,9 @@ r2:
   secret-key: ${R2_SECRET_KEY}
   endpoint: ${R2_ENDPOINT}
   bucket: ${R2_BUCKET}
+
+jwt:
+  # Base64-encoded 256-bit HMAC-SHA256 secret — set this in the environment/secrets vault.
+  secret: ${JWT_SECRET}
+  # Token validity in milliseconds: default 24 hours (86_400_000 ms).
+  expiry-ms: ${JWT_EXPIRY_MS:86400000}
